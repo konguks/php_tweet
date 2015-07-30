@@ -15,9 +15,9 @@ define('ACCESS_TOKEN_SECRET', 'LEcNKVMsJkgKs2z7WenI7mAKPrsFqIEpX4yEQBBXJbnmK');
 try {
 	$toa = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET);
 	 
-	$query = array('q' => '#IamFan','count' => 100);
+	$query = array('q' =&gt; '#IamFan','count' =&gt; 100);
 	 
-	$results = $toa->get('search/tweets', $query);
+	$results = $toa-&gt;get('search/tweets', $query);
 
 	$arr = json_decode($results,true);
 	 
@@ -28,7 +28,7 @@ try {
 	
 } 
 catch(Exception $e) {
-  echo 'Message: ' .$e->getMessage();
+  echo 'Message: ' .$e-&gt;getMessage();
 }
 
 ?> 

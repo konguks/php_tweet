@@ -20,7 +20,7 @@ try {
 	$results = $toa->get('search/tweets', $query);		
 	 
 	foreach ($results->statuses as $result) {
-	  echo $result->user->screen_name . ": " . $result->text . "\n";
+	  echo $result->user->screen_name . ": " . $result->text . '<br>';
 	}
 	echo 'done....';
 	
